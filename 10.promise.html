@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<sr>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function prom(a){
+            return new Promise(function(resole,reject){
+                console.log("fetching data please wait...");
+                if(a){
+                    resole('i am successful')
+                }
+                else{
+                    reject('i am faild')
+                }
+            })
+        }
+        prom(true).then((result)=>{
+            console.log(result)
+        }).catch((error)=>{
+            console.log(error)
+        })
+    </script>
+</body>
+</html>
